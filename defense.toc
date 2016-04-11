@@ -1,16 +1,12 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Computing the critical subgroups of elliptic curves}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Ellipitc curves and modular curves}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{The critical subgroup and critical polynomials}{10}{0}{1}
-\beamer@subsectionintoc {1}{3}{Application of results to $E_{crit}(\mathbb {Q})$}{17}{0}{1}
-\beamer@sectionintoc {2}{$q$-expansion of newforms at non-unitary cusps}{28}{0}{2}
-\beamer@subsectionintoc {2}{1}{Problem description}{28}{0}{2}
-\beamer@subsectionintoc {2}{2}{Fourier expansions}{31}{0}{2}
-\beamer@subsectionintoc {2}{3}{Computing twists and pseudo-eigenvalues}{34}{0}{2}
-\beamer@subsectionintoc {2}{4}{Examples}{36}{0}{2}
-\beamer@subsectionintoc {2}{5}{Relations to automorphic side}{38}{0}{2}
-\beamer@subsectionintoc {2}{6}{Further questions}{38}{0}{2}
-\beamer@sectionintoc {3}{Chow-Heegner points}{38}{0}{3}
-\beamer@subsectionintoc {3}{1}{Definitions}{38}{0}{3}
-\beamer@subsectionintoc {3}{2}{Even index of Chow-Heegner points}{38}{0}{3}
-\beamer@subsectionintoc {3}{3}{Computing Chow-Heegner points}{38}{0}{3}
+\beamer@sectionintoc {1}{Critical subgroups of elliptic curves}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Ellipitc curves and modular curves}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{The critical subgroup and critical polynomials}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Application of results to $E_{crit}(\mathbb {Q})$}{12}{0}{1}
+\beamer@sectionintoc {2}{$q$-expansion of newforms at non-unitary cusps}{17}{0}{2}
+\beamer@subsectionintoc {2}{1}{Problem description}{17}{0}{2}
+\beamer@subsectionintoc {2}{2}{Fourier expansions}{20}{0}{2}
+\beamer@subsectionintoc {2}{3}{Computing twists and pseudo-eigenvalues}{23}{0}{2}
+\beamer@subsectionintoc {2}{4}{Examples}{26}{0}{2}
+\beamer@sectionintoc {3}{Chow-Heegner points}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{Computing Chow-Heegner points}{31}{0}{3}

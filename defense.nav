@@ -1,109 +1,91 @@
 \beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\sectionentry {1}{Critical subgroups of elliptic curves}{2}{Critical subgroups of elliptic curves}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Computing the critical subgroups of elliptic curves}{3}{Computing the critical subgroups of elliptic curves}{0}}
-\headcommand {\beamer@sectionpages {1}{2}}
-\headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Ellipitc curves and modular curves}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Ellipitc curves and modular curves}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Ellipitc curves and modular curves}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{1}{1}{4/4}{Ellipitc curves and modular curves}{0}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Ellipitc curves and modular curves}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{1}{2}{5/5}{Ellipitc curves and modular curves}{0}}
+\headcommand {\slideentry {1}{1}{3}{5/5}{Ellipitc curves and modular curves}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {1}{1}{3}{6/6}{Ellipitc curves and modular curves}{0}}
+\headcommand {\slideentry {1}{1}{4}{6/6}{Ellipitc curves and modular curves}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {1}{1}{4}{7/7}{Ellipitc curves and modular curves}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{The critical subgroup and critical polynomials}}\headcommand {\beamer@subsectionpages {3}{6}}
+\headcommand {\slideentry {1}{2}{1}{7/7}{The critical subgroup and critical polynomials}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {1}{1}{5}{8/8}{Ellipitc curves and modular curves}{0}}
+\headcommand {\slideentry {1}{2}{2}{8/8}{The critical subgroup and critical polynomials}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{1}{6}{9/9}{Ellipitc curves and modular curves}{0}}
+\headcommand {\slideentry {1}{2}{3}{9/9}{The critical subgroup and critical polynomials}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{10}{The critical subgroup and critical polynomials}}\headcommand {\beamer@subsectionpages {4}{9}}
-\headcommand {\slideentry {1}{2}{1}{10/10}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{2}{4}{10/10}{The critical subgroup and critical polynomials}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {1}{2}{2}{11/11}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{2}{5}{11/11}{The critical subgroup and critical polynomials}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {1}{2}{3}{12/12}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{12}{Application of results to $E_{crit}(\mathbb {Q})$}}\headcommand {\beamer@subsectionpages {7}{11}}
+\headcommand {\slideentry {1}{3}{1}{12/12}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {1}{2}{4}{13/13}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{3}{2}{13/13}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {1}{2}{5}{14/14}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{3}{3}{14/14}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {1}{2}{6}{15/15}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{3}{4}{15/15}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {1}{2}{7}{16/16}{The critical subgroup and critical polynomials}{0}}
+\headcommand {\slideentry {1}{3}{5}{16/16}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{17}{Application of results to $E_{crit}(\mathbb {Q})$}}\headcommand {\beamer@subsectionpages {10}{16}}
-\headcommand {\slideentry {1}{3}{1}{17/17}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\sectionentry {2}{$q$-expansion of newforms at non-unitary cusps}{17}{$q$-expansion of newforms at non-unitary cusps}{0}}
+\headcommand {\beamer@sectionpages {2}{16}}
+\headcommand {\beamer@subsectionpages {12}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Problem description}}\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\slideentry {2}{1}{1}{17/17}{Problem description}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {1}{3}{2}{18/18}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{1}{2}{18/18}{Problem description}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {1}{3}{3}{19/19}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{1}{3}{19/19}{Problem description}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {1}{3}{4}{20/20}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{20}{Fourier expansions}}\headcommand {\beamer@subsectionpages {17}{19}}
+\headcommand {\slideentry {2}{2}{1}{20/20}{Fourier expansions}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {1}{3}{5}{21/21}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{2}{2}{21/21}{Fourier expansions}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {1}{3}{6}{22/22}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{2}{3}{22/22}{Fourier expansions}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {1}{3}{7}{23/23}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{23}{Computing twists and pseudo-eigenvalues}}\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\slideentry {2}{3}{1}{23/23}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {1}{3}{8}{24/24}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{3}{2}{24/24}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {1}{3}{9}{25/25}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{3}{3}{25/25}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {1}{3}{10}{26/26}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{26}{Examples}}\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\slideentry {2}{4}{1}{26/26}{Examples}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {1}{3}{11}{27/27}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\slideentry {2}{4}{2}{27/27}{Examples}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\sectionentry {2}{$q$-expansion of newforms at non-unitary cusps}{28}{$q$-expansion of newforms at non-unitary cusps}{0}}
-\headcommand {\beamer@sectionpages {3}{27}}
-\headcommand {\beamer@subsectionpages {17}{27}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{28}{Problem description}}\headcommand {\beamer@subsectionpages {28}{27}}
-\headcommand {\slideentry {2}{1}{1}{28/28}{Problem description}{0}}
+\headcommand {\slideentry {2}{4}{3}{28/28}{Examples}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {2}{1}{2}{29/29}{Problem description}{0}}
+\headcommand {\sectionentry {3}{Chow-Heegner points}{29}{Chow-Heegner points}{0}}
+\headcommand {\beamer@sectionpages {17}{28}}
+\headcommand {\beamer@subsectionpages {26}{28}}
+\headcommand {\slideentry {3}{0}{1}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {2}{1}{3}{30/30}{Problem description}{0}}
+\headcommand {\slideentry {3}{0}{2}{30/30}{}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{31}{Fourier expansions}}\headcommand {\beamer@subsectionpages {28}{30}}
-\headcommand {\slideentry {2}{2}{1}{31/31}{Fourier expansions}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{31}{Computing Chow-Heegner points}}\headcommand {\beamer@subsectionpages {29}{30}}
+\headcommand {\slideentry {3}{1}{1}{31/31}{Computing Chow-Heegner points}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {2}{2}{2}{32/32}{Fourier expansions}{0}}
+\headcommand {\slideentry {3}{1}{2}{32/32}{Computing Chow-Heegner points}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {2}{2}{3}{33/33}{Fourier expansions}{0}}
+\headcommand {\slideentry {3}{1}{3}{33/33}{Computing Chow-Heegner points}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{34}{Computing twists and pseudo-eigenvalues}}\headcommand {\beamer@subsectionpages {31}{33}}
-\headcommand {\slideentry {2}{3}{1}{34/34}{Computing twists and pseudo-eigenvalues}{0}}
+\headcommand {\slideentry {3}{1}{4}{34/34}{Computing Chow-Heegner points}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\slideentry {2}{3}{2}{35/35}{Computing twists and pseudo-eigenvalues}{0}}
-\headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{36}{Examples}}\headcommand {\beamer@subsectionpages {34}{35}}
-\headcommand {\slideentry {2}{4}{1}{36/36}{Examples}{0}}
-\headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {2}{4}{2}{37/37}{Examples}{0}}
-\headcommand {\beamer@framepages {37}{37}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{38}{Relations to automorphic side}}\headcommand {\beamer@subsectionpages {36}{37}}
-\headcommand {\beamer@subsectionentry {0}{2}{6}{38}{Further questions}}\headcommand {\beamer@subsectionpages {38}{37}}
-\headcommand {\sectionentry {3}{Chow-Heegner points}{38}{Chow-Heegner points}{0}}
-\headcommand {\beamer@sectionpages {28}{37}}
-\headcommand {\beamer@subsectionpages {38}{37}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{38}{Definitions}}\headcommand {\beamer@subsectionpages {38}{37}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{38}{Even index of Chow-Heegner points}}\headcommand {\beamer@subsectionpages {38}{37}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{38}{Computing Chow-Heegner points}}\headcommand {\beamer@subsectionpages {38}{37}}
-\headcommand {\slideentry {3}{3}{1}{38/38}{Computing Chow-Heegner points}{0}}
-\headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {3}{3}{2}{39/39}{Computing Chow-Heegner points}{0}}
-\headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {3}{3}{3}{40/40}{Computing Chow-Heegner points}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {3}{3}{4}{41/41}{Computing Chow-Heegner points}{0}}
-\headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@partpages {1}{41}}
-\headcommand {\beamer@subsectionpages {38}{41}}
-\headcommand {\beamer@sectionpages {38}{41}}
-\headcommand {\beamer@documentpages {41}}
-\headcommand {\def \inserttotalframenumber {42}}
+\headcommand {\beamer@partpages {1}{34}}
+\headcommand {\beamer@subsectionpages {31}{34}}
+\headcommand {\beamer@sectionpages {29}{34}}
+\headcommand {\beamer@documentpages {34}}
+\headcommand {\def \inserttotalframenumber {35}}
