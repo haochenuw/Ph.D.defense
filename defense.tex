@@ -174,7 +174,7 @@ Advisor: William Stein % Your email address
 
 % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
  \begin{frame}
- \frametitle{Plan}
+ \frametitle{\insertsection}
  \tableofcontents[currentsection]
  \end{frame}
 
@@ -222,7 +222,7 @@ $r$ is called the \red{rank}. $T$ is the \red{torsion subgroup}.
 
 
 % $rank(E(\bQ))$ has been studied extensively in number theory. \\ % up to now, no easy way of computing the rank.
-There is an entire function $L(E,s)$ called the \red{$L$-function} of $E$.  \\
+There is an entire function $L(E,s)$ called the $L$-function of $E$.  \\
 
 \medskip
 
@@ -233,13 +233,13 @@ The rank part of the  \red{Birch and Swinnerton-Dyer (BSD) conjecture} is:
 
 \pause
 
-RHS is the \red{analytic rank}, denoted by $r_{an}(E)$. \\
+RHS is the \red{analytic rank}, denoted by \red{$r_{an}(E)$}. \\
 The BSD conjecture is open when $r_{an}(E) > 1$. \\
 
 \medskip
 \pause
 
-The proof of BSD for $r_{an}(E) = 1$ uses a construction called \red{Heegner points}.
+The proof of BSD for $r_{an}(E) = 1$ uses a construction called Heegner points. 
 
 
 \end{frame}
@@ -263,9 +263,9 @@ $X_0(N) = \Gamma_0(N) \backslash \cH^*$.
 
 \begin{itemize}
 \item $X_0(N)$ has the structure of a  nonsingular projective curve.
-\item Rational functions on $X_0(N)$ are called {\bf modular functions}. They have {\bf q-expansions} at infinity:
+\item Rational functions on $X_0(N)$ are called modular functions. They have \red{$q$-expansions} at infinity:
 \[
-	u(q)  = \sum_{n \geq -m} b_n q^n, \; q = e^{2 \pi i z}
+	u(q)  = \sum_{n \geq -m} b_n q^n, \; q = e^{2 \pi i z}. 
 \]
 \end{itemize}
 \end{frame}
@@ -282,32 +282,20 @@ $X_0(N) = \Gamma_0(N) \backslash \cH^*$.
 For every elliptic curve $E/\bQ$, there exists an integer $N > 1$ and a surjective morphism 
 $\varphi: X_0(N) \to E$ defined over $\bQ$.
 \end{theorem}
-\pause
-
-
-\begin{itemize}
-\item Let $\omega = \omega_{E, \varphi} = \varphi^*(\frac{dx}{y}) $. Then $\omega$ is a holomorphic differential on $X_0(N)$.
 
 \pause
+\smallskip
 
-% (For experts: $\omega  = c f(z) dz$, where $f$ is the modular form attached to $E$). 
-\item $\omega$ has a q-expansion $\omega = \left( \sum_{n \geq 0} a_n q^n \right) dq$, where the coefficients $a_n$ depend on $E$. Moreover, there exists an algorithm to compute 
-this q-expansion.
+The smallest $N$ is called the conductor of $E$.  \\
+\smallskip
 
-\pause
-\item The smallest $N$ is called the {\bf conductor} of $E$. 
+Let $\omega = \varphi^*(\frac{dx}{y})$. Then $\omega = c f(z) \mathrm{d} z$, where $f$ is the \red{modular form attached 
+to $E$}.  \\
 
-\pause
+\smallskip
 
-\item $\varphi$ is called a {\bf modular parametrisation}. \\
-We assume $E$ is optimal, then $\varphi$ is unique up to sign.
- %$f(z)$ is {\bf the modular form attached to $E$}   
-% We assume $(E,\varphi)$ is a Weil curve, i.e., any non constant map $\psi: X_0(N) \to E'$ to an elliptic curve $E'$ factors through $\varphi$. In this case $\varphi$ is unique upto $\pm 1$. 
+We assume $E$ is optimal. Then $\varphi$ is unique up to sign.
 
-\pause 
-
-\item From now on, we fix  the curve $E$, the conductor $N$, the differential $\omega$, and the morphism $\varphi$. 
-\end{itemize}
 
 
 \end{frame}
@@ -362,7 +350,7 @@ We assume $E$ is optimal, then $\varphi$ is unique up to sign.
 Let $R_\varphi =  \sum (e_\varphi(z)  -1) [z]$ be the ramification divisor of $\varphi$.
 
 \begin{Def}[Mazur, Swinnerton-Dyer]
-The {\bf critical subgroup} of $E$ is
+The \red{critical subgroup} of $E$ is
 \[
 	E_{crit}(\bQ)  = \langle tr(\varphi([z])) : [z] \in \supp R_\varphi \rangle \subseteq E(\bQ), 
 \] 
@@ -416,12 +404,10 @@ Is there an elliptic curve $E/\bQ$ with $r_{an}(E) \geq 2$ and $rank(E_{crit}(\b
 %\frametitle{Critical Polynomials}
 
 %Notation: $Z_\omega =$.  \\
-Plan: investigate $E_{crit}(\bQ)$ by studying the `critical $j$-polynomial' attached to $\Div(\omega)$. 
-
 \pause 
 \begin{Def}
 %Let $E/\bQ$ be an elliptic curve of conductor $N$ and let $j$ be the $j$-invariant. 
-Write $\Div(\omega) = \sum n_z[z]$. The \textbf{critical j-polynomial} of $E$ is 
+Write $\Div(\omega) = \sum n_z[z]$. The \red{critical j-polynomial} of $E$ is 
 \[
 F_{E,j}(x) = \prod_{z \in \supp \Div(\omega), j(z) \neq \infty}(x-j(z))^{n_z}.
 \]
@@ -431,10 +417,10 @@ $F_{E,j}(x) \in \bQ[x], \deg F_{E,j} \leq 2g-2$. Equality holds if $N$ is square
 
 %------------------------------------------------
 
-\begin{frame}{Polynomial Relation ({\bf PR}): a proposition}
+\begin{frame}{Polynomial Relation (I)}
 %When  $N$ is not square free, \textbf{NORM} does not work. \textbf{IPR} is an algorithm to compute $F_{E,j}$, which works for any $N$. \\
 
-Let $r, u \in \bQ(C)$, a {\bf minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial $P(x,y) \in \bQ[x,y]$, such that $P(r,u) = 0$.  \\
+Let $r, u \in \bQ(C)$, a \red{minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial $P(x,y) \in \bQ[x,y]$, such that $P(r,u) = 0$.  \\
 
 Say $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$. 
 
@@ -454,10 +440,9 @@ If $\bQ(C) = \bQ(r,u)$ and $\gcd(f_0(y), f_n(y)) = 1$, then
 
 
 
-\begin{frame}{Polynomial Relation: theorem}
-Let $C = X_0(N)$ and let $dj = j'(z)dz$. Set
-\[
-r = j(j-1728)  \frac{\omega }{{dj}}, \;  u = \frac{1}{j}.
+\begin{frame}{Polynomial Relation (II)}
+Set \[
+r = j(j-1728)  \frac{\omega }{{\mathrm{d}j}}, \;  u = \frac{1}{j}.
 \]
 Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points in $\supp D_0$ have $j$-value 0 or 1728.  \\
 
@@ -468,57 +453,33 @@ Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points
 %Moreover, if $T >  2g-2$, then the pair $(rj^T,u)$ satisfies the conditions of the proposition. (\hyperlink{condition is satisfied}{\underline{One proves it by looking at the zeros and poles of $rj^T$}}). % Proof is not long, but please believe me. t
 
 \begin{Prop}[C.]
-If $T \in \bZ_{>0}$ is sufficiently large and $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ is a minimal polynomial relation between $rj^T$ and $u$, then
+For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ is a minimal polynomial relation of $rj^T$ and $u$. Then
 \[
-		F_{E,j}(x) = f_0 ( 1/x) \cdot x^{A} (x - 1728)^B
+		F_{E,j}(x) = f_0(1/x) \cdot x^{A} (x - 1728)^B
 \]	
-where $A,B$ are integers  \hyperlink{consts AB}{depending on $N, P$ and $T$}.
+where $A,B$ are explicitly computable integers. 
 \end{Prop}
 
 \end{frame}
 
+\begin{frame}{The Algorithm to compute $F_{E,j}$}
 
-
-
-\begin{frame}{Polynomial Relation: algorithm}
-
-Algorithm: {\bf PR} \\
-Input: the $q$-expansion of the modular form $f_E$ attached to $E$; Output: $F_{E,j}$.  
-
-\pause
-
-\begin{enumerate}
-\item $r = \frac{j(j-1728) f_E dz }{dj}, \;  u = \frac{1}{j}$.
-
-\pause
-
-\item Fix \hyperlink{largeM}{\underline{a large $M$}}, compute the q-expansions of $r$ and $u$ to $q^M$.  \\
-
-\pause 
-\item Write  $\sum_{\substack{0 \leq a \leq \deg u \\ 0 \leq b \leq \deg r}} c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $ as a linear system on the coefficients $c_{a,b}$.
-
-\pause 
-
-\item When $M$ is sufficiently large, the linear system has nullity 1. Let $(c_{a,b})$ be a nonzero solution. 
-
-\pause
-
-\item Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the theorem.
-\end{enumerate}
-
-\hypertarget{pr: algorithm}{}
-
-
-\pause
-
+%\begin{algorithm}
+%\begin{algorithmic}
+%\Require The newform $f_E$ attached to elliptic curve $E/\bQ$; \\ 
+%\Ensure $F_{E,j}$.  
+%$r = \frac{j(j-1728) f_E dz }{dj}, \;  u = \frac{1}{j}$. 
+%Compute the q-expansions of $r$ and $u$ to $q^M$.  \\
+%Solve the system $\sum_{\substack{0 \leq a \leq \deg u \\ 0 \leq b \leq \deg r}} c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $
+%Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the theorem.
+%\end{algorithmic}
+%\end{algorithm}
 \begin{Example}
 $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\bf 37b},j}(x) = H_{-16}(x)^2$.
 \end{Example}
 
-\pause
-
-Remark: When $N$ is large($\sim 1000$), the algorithm {\bf PR} is slow. We have 
-\hyperlink{yang pair}{\underline{another faster algorithm}} that computes a critical $h$-polynomial, where $h$ is some $\eta$-quotient chosen within the algorithm.
+%Remark: When $N$ is large($\sim 1000$), the algorithm {\bf PR} is slow. We have 
+%\hyperlink{yang pair}{\underline{another faster algorithm}} that computes a critical $h$-polynomial, where $h$ is some $\eta$-quotient chosen within the algorithm.
 
 \end{frame}
 
@@ -609,7 +570,7 @@ Remark: When $N$ is large($\sim 1000$), the algorithm {\bf PR} is slow. We have
 %& \implies \sum_{z \in \Div(g)} n_z\varphi(z) = 0 \in E(\bQ). 
 %\end{align*}
 
-Let $\mathscr{E}_i(N)$ denote the set of elliptic points on $X_0(N)$ of period $i$, (i = 2,3).\\
+For $i = 2,3$, let $\mathscr{E}_i(N)$ denote the set of elliptic points on $X_0(N)$ of period $i$. \\
 
 \pause
 \begin{Lemma}[C.]
@@ -668,7 +629,6 @@ Then $rank(E_{crit}(\bQ))  = 0$.
    \end{table}
 \end{center}
 
- \footnotetext[1]{We use Cremona's labels for elliptic curves, where the number represents  the conductor, and the letter represents the isogeny class.}
 
 \end{frame}
  
@@ -707,43 +667,18 @@ Then $rank(E_{crit}(\bQ))  = 0$.
 
 \begin{frame}{Discussion}
 
-From the data and the theorems, we conclude:
 \begin{Corollary}
 For all elliptic curves $E$ of rank 2 and conductor $N <1000$, the rank of $E_{crit}(\bQ))$ is 0.
 \end{Corollary}
 \pause
-
-Therefore, it seems hard to find an elliptic curve with $r_{an}(E) \geq 2$ and $rank(E_{crit}(\bQ)) > 0$. 
-
-\pause
 \smallskip
-
-\end{frame}
-
-\begin{frame}{Future work}
-
-\pause 
-
+Future work
 \begin{itemize}
-\item Does $F_{E,j}$ always factor into a product of Hilbert class polynomials 
-and one irreducible polynomial? 
+\item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$.
 
-\pause 
-
-\item What happens if we do the same for $\Div(\omega_g)$ for other modular forms $g$
-of level $N$? % \item Characterize ramification at cusps(work in progress).
-
-\pause
-
-\item Use {\bf PR} to compute Fourier expansions of newforms at every cusp(work in progress).
-
-\pause
-\item Use {\bf PR} to compute Chow-Heegner points(work in progress).
-
-\pause
-
-\item Use {\bf PR} to compute Weierstrass points on $X_0(N)$.
+\item Prove or disprove that $\rank(E_{crit}(\bQ)) = 0$ whenever $r_{an}(E)$ is even.
 \end{itemize}
+
 \end{frame}
 
 
@@ -758,16 +693,14 @@ of level $N$? % \item Characterize ramification at cusps(work in progress).
 
 \section{$q$-expansion of newforms at non-unitary cusps} 
 
-\AtBeginSection[]
-{
- \begin{frame}<beamer>
- \frametitle{Plan}
+ \begin{frame}
+ \frametitle{\insertsection}
  \tableofcontents[currentsection]
  \end{frame}
-}
 
 
-\subsection{Problem description}
+
+
 
 \begin{frame}
 \frametitle{Modular forms}
@@ -781,28 +714,57 @@ defined by
 
 \begin{Def}
 A \textbf{modular form} of weight $k$ and level $N$ is a holomorphic function $f: \cH \to \bC$ s.t. \\
-(1) $f(z)  = f|[\alpha]_k(z), \; \forall \alpha \in \Gamma_0(N)$. \\
-(2) $f$ has holomorphic extension to all cusps of $X_0(N)$. \\
+(1) $f(z)  = f|[\alpha]_k(z), \; \forall \alpha \in \Gamma_0(N)$ ($\Gamma_1(N)$). \\
+(2) $f$ has holomorphic extension to all cusps of $X_0(N)$ ($X_1(N)$). \\
 \end{Def}
 
 \pause
 
 {\bf Cusp forms} = modular forms that are zero at all cusps. \\
-Modular forms have {\bf q-expansions}: $f(q) = \sum_{n \geq 0} a_n q^n$, $q = exp(2\pi i z)$.
+Modular forms have {\bf q-expansions}: $f(q) = \sum_{n \geq 0} a_n q^n$, $q = exp(2\pi i z)$. \\
+The space of cusp forms = $S_k(N)$. 
+
 \end{frame}
 
 
-\begin{frame}{Hecke}
+\begin{frame}{Operators}
+
+\begin{itemize}
+\item Hecke operators is a family $\{T_n, n \geq 1 \} \cup \{ \langle d \rangle: (d,N) = 1\}$ of commuting linear operators on $S_k(N)$. 
+
+\item $B_d$ operators: $B_d(\sum a_n q^n) = \sum a_{n} q^{nd}$.
+
+\item The Atkin-Lehner involution $W_N$. 
+
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}{Newforms}
 
+\begin{itemize}
+\item When $M \mid N$, $\exists$ degeneracy maps $S_k(M) \to S_k(N)$. 
+\item Old subspace = span of images of all degenaracy maps. 
+\item New subspace = $(\mbox{Old subspace})^{\perp}$.
+\item $S_k(N)^{new}$ has a basis of simultaneous eigenforms for \red{all}  Hecke operators. These eigenforms 
+are called \red{newforms}.
+\end{itemize}
+
 \end{frame}
 
-\subsection{Fourier expansions}
+
 
 \begin{frame}{Fourier expansion}
+Let $f \in S_k(\Gamma_0(N))$ be a newform and let $\fc \in X_0(N)$ be a cusp other than $\infty$.  \\
+
+Goal: compute the expansion of $f$ at $\fc$. \\ 
+
+First, only well-defined for $denom(\fc)^2 \mid N$. \\ 
+
+Equivalent to computing the expansion of 
+
+$$\large{f | \left[\mtwo{1}{0}{ld}{1}\right]}$$ 
+$\red{\mbox{ at } \infty} \mbox{ for all } d^2 \mid N, l \in (\bZ/N\bZ)^{\times}$.
 
 \end{frame}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.24)  10 APR 2016 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.24)  11 APR 2016 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2121,24 +2121,20 @@ thkerncmss.
 
 ] [10
 
-]
-Overfull \vbox (17.16893pt too high) detected at line 523
- []
-
-[11
+] [11
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 589.
+(hyperref)                removing `math shift' on input line 550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 589.
+(hyperref)                removing `subscript' on input line 550.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 589.
+(hyperref)                removing `math shift' on input line 550.
 
 [12
 
@@ -2148,29 +2144,38 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 nk\040two}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.698 \end{frame}
+l.658 \end{frame}
                   [14
 
 ] [15
 
-] [16
-
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 759.
+(hyperref)                removing `math shift' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 759.
+(hyperref)                removing `math shift' on input line 694.
 
-[17
+(./defense.toc) [16
+
+] [17
 
 ] [18
 
 ] [19
 
-] [20
+]
+LaTeX Font Info:    Try loading font information for U+euf on input line 769.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 769.
+
+[20
 
 ] [21
 
@@ -2183,12 +2188,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [25
 
 ]
-LaTeX Font Info:    Try loading font information for U+euf on input line 910.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Overfull \vbox (7.33395pt too high) detected at line 910
+Overfull \vbox (7.33395pt too high) detected at line 872
  []
 
 [26
@@ -2197,7 +2197,7 @@ Overfull \vbox (7.33395pt too high) detected at line 910
 
 ] [28
 
-] (./defense.toc) [29
+] [29
 
 ] [30
 
@@ -2219,13 +2219,13 @@ Overfull \vbox (7.33395pt too high) detected at line 910
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 974.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 974.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 936.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 936.
  (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 974.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 974.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 936.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 936.
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: D5BD0F9044B1F1528F78DE81AFD2F20A;834.
+(rerunfilecheck)             Checksum: 09B43F8F93269D74B64E1F819D5AC349;695.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2234,54 +2234,45 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 974.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 936.
  ) 
 Here is how much of TeX's memory you used:
- 27970 strings out of 493089
- 564163 string characters out of 6134841
- 614602 words of memory out of 5000000
- 30818 multiletter control sequences out of 15000+600000
- 23907 words of font info for 90 fonts, out of 8000000 for 9000
+ 27958 strings out of 493089
+ 563821 string characters out of 6134841
+ 611443 words of memory out of 5000000
+ 30810 multiletter control sequences out of 15000+600000
+ 27147 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,88p,10434b,676s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{yang\040pair} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{largeM} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{consts\040AB} has been referenced but does not exis
-t, replaced by a fixed one
-
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on defense.pdf (34 pages, 275161 bytes).
+ 67i,17n,88p,10434b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on defense.pdf (34 pages, 272613 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

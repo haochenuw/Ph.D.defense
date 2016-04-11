@@ -35,41 +35,39 @@
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\slideentry {1}{3}{4}{15/15}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {1}{3}{5}{16/16}{Application of results to $E_{crit}(\mathbb {Q})$}{0}}
+\headcommand {\sectionentry {2}{$q$-expansion of newforms at non-unitary cusps}{16}{$q$-expansion of newforms at non-unitary cusps}{0}}
+\headcommand {\beamer@sectionpages {2}{15}}
+\headcommand {\beamer@subsectionpages {12}{15}}
+\headcommand {\slideentry {2}{0}{1}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\sectionentry {2}{$q$-expansion of newforms at non-unitary cusps}{17}{$q$-expansion of newforms at non-unitary cusps}{0}}
-\headcommand {\beamer@sectionpages {2}{16}}
-\headcommand {\beamer@subsectionpages {12}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Problem description}}\headcommand {\beamer@subsectionpages {17}{16}}
-\headcommand {\slideentry {2}{1}{1}{17/17}{Problem description}{0}}
+\headcommand {\slideentry {2}{0}{2}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{1}{2}{18/18}{Problem description}{0}}
+\headcommand {\slideentry {2}{0}{3}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{1}{3}{19/19}{Problem description}{0}}
+\headcommand {\slideentry {2}{0}{4}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{20}{Fourier expansions}}\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\slideentry {2}{2}{1}{20/20}{Fourier expansions}{0}}
+\headcommand {\slideentry {2}{0}{5}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {2}{2}{2}{21/21}{Fourier expansions}{0}}
+\headcommand {\slideentry {2}{0}{6}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {2}{2}{3}{22/22}{Fourier expansions}{0}}
+\headcommand {\slideentry {2}{0}{7}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{23}{Computing twists and pseudo-eigenvalues}}\headcommand {\beamer@subsectionpages {20}{22}}
-\headcommand {\slideentry {2}{3}{1}{23/23}{Computing twists and pseudo-eigenvalues}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{23}{Computing twists and pseudo-eigenvalues}}\headcommand {\beamer@subsectionpages {16}{22}}
+\headcommand {\slideentry {2}{1}{1}{23/23}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {2}{3}{2}{24/24}{Computing twists and pseudo-eigenvalues}{0}}
+\headcommand {\slideentry {2}{1}{2}{24/24}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {2}{3}{3}{25/25}{Computing twists and pseudo-eigenvalues}{0}}
+\headcommand {\slideentry {2}{1}{3}{25/25}{Computing twists and pseudo-eigenvalues}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{26}{Examples}}\headcommand {\beamer@subsectionpages {23}{25}}
-\headcommand {\slideentry {2}{4}{1}{26/26}{Examples}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{26}{Examples}}\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\slideentry {2}{2}{1}{26/26}{Examples}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {2}{4}{2}{27/27}{Examples}{0}}
+\headcommand {\slideentry {2}{2}{2}{27/27}{Examples}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {2}{4}{3}{28/28}{Examples}{0}}
+\headcommand {\slideentry {2}{2}{3}{28/28}{Examples}{0}}
 \headcommand {\beamer@framepages {28}{28}}
 \headcommand {\sectionentry {3}{Chow-Heegner points}{29}{Chow-Heegner points}{0}}
-\headcommand {\beamer@sectionpages {17}{28}}
+\headcommand {\beamer@sectionpages {16}{28}}
 \headcommand {\beamer@subsectionpages {26}{28}}
 \headcommand {\slideentry {3}{0}{1}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
@@ -88,4 +86,4 @@
 \headcommand {\beamer@subsectionpages {31}{34}}
 \headcommand {\beamer@sectionpages {29}{34}}
 \headcommand {\beamer@documentpages {34}}
-\headcommand {\def \inserttotalframenumber {35}}
+\headcommand {\def \inserttotalframenumber {34}}
