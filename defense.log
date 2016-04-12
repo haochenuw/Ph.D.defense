@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.24)  11 APR 2016 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.24)  12 APR 2016 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2126,15 +2126,15 @@ thkerncmss.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 550.
+(hyperref)                removing `math shift' on input line 551.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 550.
+(hyperref)                removing `subscript' on input line 551.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 550.
+(hyperref)                removing `math shift' on input line 551.
 
 [12
 
@@ -2144,7 +2144,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 nk\040two}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.658 \end{frame}
+l.659 \end{frame}
                   [14
 
 ] [15
@@ -2152,11 +2152,11 @@ l.658 \end{frame}
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 694.
+(hyperref)                removing `math shift' on input line 695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 694.
+(hyperref)                removing `math shift' on input line 695.
 
 (./defense.toc) [16
 
@@ -2167,17 +2167,21 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ] [19
 
 ]
-LaTeX Font Info:    Try loading font information for U+euf on input line 769.
+LaTeX Font Info:    Try loading font information for U+euf on input line 774.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 769.
+LaTeX Font Warning: Command \large invalid in math mode on input line 774.
 
 [20
 
-] [21
+]
+Overfull \vbox (1.48215pt too high) detected at line 796
+ []
+
+[21
 
 ] [22
 
@@ -2188,7 +2192,7 @@ LaTeX Font Warning: Command \large invalid in math mode on input line 769.
 ] [25
 
 ]
-Overfull \vbox (7.33395pt too high) detected at line 872
+Overfull \vbox (7.33395pt too high) detected at line 898
  []
 
 [26
@@ -2197,9 +2201,12 @@ Overfull \vbox (7.33395pt too high) detected at line 872
 
 ] [28
 
-] [29
+] (./defense.toc) [29
 
-] [30
+]
+\openout4 = `defense.vrb'.
+
+ (./defense.vrb) [30
 
 ] [31
 
@@ -2207,7 +2214,18 @@ Overfull \vbox (7.33395pt too high) detected at line 872
 
 ] [33
 
-] [34
+]
+[34
+
+]
+Overfull \vbox (1.48776pt too high) detected at line 1035
+ []
+
+[35
+
+] [36
+
+] [37
 
 ]
 \tf@nav=\write6
@@ -2219,13 +2237,14 @@ Overfull \vbox (7.33395pt too high) detected at line 872
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 936.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 936.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1051.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1051.
  (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 936.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 936.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1051.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1051.
+
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: 09B43F8F93269D74B64E1F819D5AC349;695.
+(rerunfilecheck)             Checksum: FE3E1F1B69D1A936A45EE0E3597EC9AF;716.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2234,16 +2253,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 936.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1051.
  ) 
 Here is how much of TeX's memory you used:
- 27958 strings out of 493089
- 563821 string characters out of 6134841
- 611443 words of memory out of 5000000
- 30810 multiletter control sequences out of 15000+600000
- 27147 words of font info for 102 fonts, out of 8000000 for 9000
+ 28068 strings out of 493089
+ 566112 string characters out of 6134841
+ 611658 words of memory out of 5000000
+ 30906 multiletter control sequences out of 15000+600000
+ 27855 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,17n,88p,10434b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,88p,10434b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -2269,10 +2288,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 /2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on defense.pdf (34 pages, 272613 bytes).
+Output written on defense.pdf (37 pages, 287804 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 371 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 407 compressed objects within 5 object streams
+ 91 named destinations out of 1000 (max. 500000)
  169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

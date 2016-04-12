@@ -6,5 +6,5 @@
 \beamer@sectionintoc {2}{$q$-expansion of newforms at non-unitary cusps}{16}{0}{2}
 \beamer@subsectionintoc {2}{1}{Computing twists and pseudo-eigenvalues}{23}{0}{2}
 \beamer@subsectionintoc {2}{2}{Examples}{26}{0}{2}
-\beamer@sectionintoc {3}{Chow-Heegner points}{29}{0}{3}
-\beamer@subsectionintoc {3}{1}{Computing Chow-Heegner points}{31}{0}{3}
+\beamer@sectionintoc {3}{Chow-Heegner points: a preliminary study}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{Computing Chow-Heegner points}{32}{0}{3}

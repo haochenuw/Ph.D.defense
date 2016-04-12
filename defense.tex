@@ -127,7 +127,7 @@
 
 %\usepackage{handoutWithNotes}
 %\pgfpagesuselayout{3 on 1 with notes}[a4paper, border shrink=5mm]
-
+\usepackage{tikz-cd}
 
 %\usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
@@ -153,6 +153,7 @@ Advisor: William Stein % Your email address
 \begin{frame}
 \titlepage % Print the title page as the first slide
 \end{frame}
+
 
 %
 %\begin{frame}
@@ -462,18 +463,18 @@ where $A,B$ are explicitly computable integers.
 
 \end{frame}
 
-\begin{frame}{The Algorithm to compute $F_{E,j}$}
+\begin{frame}{The Algorithm}
 
-%\begin{algorithm}
-%\begin{algorithmic}
-%\Require The newform $f_E$ attached to elliptic curve $E/\bQ$; \\ 
-%\Ensure $F_{E,j}$.  
-%$r = \frac{j(j-1728) f_E dz }{dj}, \;  u = \frac{1}{j}$. 
-%Compute the q-expansions of $r$ and $u$ to $q^M$.  \\
-%Solve the system $\sum_{\substack{0 \leq a \leq \deg u \\ 0 \leq b \leq \deg r}} c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $
-%Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the theorem.
-%\end{algorithmic}
-%\end{algorithm}
+\begin{algorithm}[H]
+\begin{algorithmic}[[1]
+\Require The newform $f_E$ attached to elliptic curve $E/\bQ$; 
+\Ensure $F_{E,j}$.  
+\State $r = \frac{j(j-1728) f_E dz }{dj}, \;  u = \frac{1}{j}$. 
+\State Compute the q-expansions of $r$ and $u$ to $q^M$. 
+\State Solve the system $\sum c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $
+\State Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the theorem.
+\end{algorithmic}
+\end{algorithm}
 \begin{Example}
 $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\bf 37b},j}(x) = H_{-16}(x)^2$.
 \end{Example}
@@ -570,7 +571,7 @@ $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\b
 %& \implies \sum_{z \in \Div(g)} n_z\varphi(z) = 0 \in E(\bQ). 
 %\end{align*}
 
-For $i = 2,3$, let $\mathscr{E}_i(N)$ denote the set of elliptic points on $X_0(N)$ of period $i$. \\
+For $i = 2,3$, let $\mathscr{E}_i(N)$ be the set of elliptic points on $X_0(N)$ of period $i$. \\
 
 \pause
 \begin{Lemma}[C.]
@@ -720,21 +721,25 @@ A \textbf{modular form} of weight $k$ and level $N$ is a holomorphic function $f
 
 \pause
 
-{\bf Cusp forms} = modular forms that are zero at all cusps. \\
-Modular forms have {\bf q-expansions}: $f(q) = \sum_{n \geq 0} a_n q^n$, $q = exp(2\pi i z)$. \\
+\red{Cusp forms} = modular forms that are zero at all cusps. \\
+Modular forms have \red{$q$-expansions}: $f(q) = \sum_{n \geq 0} a_n q^n$, $q = exp(2\pi i z)$. \\
 The space of cusp forms = $S_k(N)$. 
 
 \end{frame}
 
 
-\begin{frame}{Operators}
+\begin{frame}{Operators on modular forms}
 
 \begin{itemize}
-\item Hecke operators is a family $\{T_n, n \geq 1 \} \cup \{ \langle d \rangle: (d,N) = 1\}$ of commuting linear operators on $S_k(N)$. 
+\item Hecke operators: a family $\{T_n, n \geq 1 \} \cup \{ \langle d \rangle: (d,N) = 1\}$ of commuting linear operators on $S_k(N)$. 
 
-\item $B_d$ operators: $B_d(\sum a_n q^n) = \sum a_{n} q^{nd}$.
+\item $B_d$ and $U_d$ operators: $B_d(\sum a_n q^n) = \sum a_{n} q^{nd}$, $U_d(\sum a_n q^n) = \sum a_{nd} q^{n}$.
 
-\item The Atkin-Lehner involution $W_N$. 
+\item The Atkin-Lehner involution $W_N$.  If $f$ is a newform on $\Gamma_1(N)$, then 
+\[
+	f | W_N = w(f) \bar{f}
+\]
+$w(f) \in \bC_1$ is called the \red{pseudo-eigenvalue} of $f$. 
 
 \end{itemize}
 
@@ -770,27 +775,52 @@ $\red{\mbox{ at } \infty} \mbox{ for all } d^2 \mid N, l \in (\bZ/N\bZ)^{\times}
 
 \begin{frame}{Idea of computing}
 
+Let $S_c' = \abcd{1}{\frac{1}{c'}}{0}{1}$ and $A_c' = \abcd{1}{0}{c'}{1}$.  Then 
+\[
+	A_c^{-u} = W_N S_{c'}^u W_N, \, \forall u \in \bZ. 
+\]
+For a character $\chi$ modulo $c'$, put 
+\begin{equation*}
+\label{formula: RS}
+	f | R_\chi(c') := \sum_{u =0}^{c'-1} \bar{\chi}(u) f | S_{c'}^u.
+\end{equation*}
+$f|R_\chi(\cond \chi) = g(\bar{\chi})f_\chi$. ($f_\chi (q) = \sum a_n(f) \chi(n)  q^n$ is a modular form of level $N'$.)   We have \begin{equation} 
+\label{formula}
+	\varphi(c') A_c^{-a} = \sum_{\cond(\chi) \mid c'} \chi(a) W_N R_\chi(c') W_N. 
+\end{equation}
+
+Applying to $f$, we arrive at
+\begin{equation} \label{expansion0}
+	\boxed{f_{[\frac{a}{c}]} \left( q\right) = \frac{w(f) }{\varphi(c')}\sum_{\cond(\chi) \mid c'} \chi(-a) f| R_\chi(c')  W_N}. 
+\end{equation}
 \end{frame}
 
 
 \begin{frame}{Idea (ctnd)}
+
+Now it left to compute the expansions of  each $f| R_\chi(c') W_N$ in the sum. 
+
+$f \otimes \chi$ :=  the unique newform such that $a_p(f \otimes \chi) = a_p(f_\chi)$ for almost all $p$. 
+(We call $f \otimes \chi$ the \red{twist of $f$ by $\chi$}).
+
+
+If $c' = \cond(\chi)$ and $f_\chi = f \otimes \chi$, then  $f| R_\chi(c') W_N = w(f \otimes \chi) f_\chi$. 
+\medskip
+
+Otherwise, $f_\chi = (f \otimes \chi) | ( 1 - U_d | B_d)$, and we use 
+\begin{Lemma} 
+   $$f| B_d|W_N = \left(\frac{N}{Md^2} \right)^{k/2}  w(f)  (f|B_{\frac{N}{Md}})^{*}.$$
+\end{Lemma} 
+
+\medskip
+
+Conclusion: suffices to compute $f \otimes \chi$ and $w(f \otimes \chi)$.
 
 \end{frame}
 
 \subsection{Computing twists and pseudo-eigenvalues}
 
 \begin{frame}{Algorithm for twists}
-
-$f$: a newform of level $N$. $\chi$: a Dirichlet character modulo $N$. \\
-
-\medskip
-
-$f_\chi (q) = \sum a_n(f) \chi(n)  q^n$ is a modular form of level $N'$. 
-
-\smallskip
-
-$f \otimes \chi$ :=  the unique newform such that $a_p(f \otimes \chi) = a_p(f_\chi)$ for almost all $p$. 
-(We call $f \otimes \chi$ the \red{twist of $f$ by $\chi$}).
 
 \begin{Lemma}
 Let $\epsilon$ be the character of $f$. Then the level of $f \otimes \chi$ divides $lcm(N, \cond(\epsilon) \cond(\chi), \cond(\chi)^2)$. 
@@ -806,30 +836,26 @@ then $g_1 = g_2$.
 
 \end{frame}
 
-\begin{frame}
-
-fixme: replace with pseudocode
-
+\begin{frame}{Algorithm to compute $f \otimes \chi$}
 \begin{algorithm}[H]
 \caption{Identifying  $f \otimes \chi$}
 \label{alg: twist}
-\begin{algorithmic}[1]
-    \Require $f \in S_k(\Gamma_1(N), \epsilon)$ a normalized newform; $\chi$ -- Dirichlet character of prime power conductor $Q = q^\beta$; Assume $Q^2 \mid N$. 
+\begin{algorithmic}
+    \Require $f \in S_k(\Gamma_0(N))$ a normalized newform; 
+     $\chi$ -- Dirichlet character of prime power conductor $Q = q^\beta$ ($Q^2 \mid N$). 
     \Ensure The newform $f \otimes \chi$. 
-    \State $Q' := \cond(\chi^2)$; $N_0 := \frac{N}{q^{v_q(N)}}$; $M_0 := Q'N_0$; $t := \frac{N}{M_0} \in \bZ$. 
-    \For{each $d \mid t$} 
-	\State Compute a basis $\{g_1^{(d)}, \cdots g_{s_d}^{(d)}\}$ of $S_k(M_0d, \chi^2)^{new}$. 
-    	\State $B_d$ := the Sturm bound for $\Gamma_1(M_0dq^2)$. 
-    	\For{$1 \leq j \leq s_d$} 
-		\If{$a_n(g_i^{(d)})= a_n(f)\chi(n)$ for all $1 \leq n \leq B_d, \gcd(n,q) = 1$}
-			\State \Return $g_i^{(d)}$.
+    \For{each $M \mid N$} 
+	\State Compute a basis $\{g_1, \ldots, g_s\}$ of $S_k(M, \chi^2)^{new}$. 
+    	\State $B$ := the Sturm bound for $\Gamma_1(MQ^2)$. 
+    	\For{$1 \leq j \leq s$} 
+		\If{$a_n(g_i)= a_n(f)\chi(n)$ for all $1 \leq n \leq B, \gcd(n,q) = 1$}
+			\State \Return $g_i$.
 		\EndIf
 	\EndFor
-    \EndFor
-    \State \Return Error.
+   \EndFor
+   \State \Return Error.
 \end{algorithmic}
 \end{algorithm}
- 
 \end{frame}
 
 \begin{frame}{Computing the pseudo-eigenvalue}
@@ -904,27 +930,116 @@ Assume $E/\bQ$, $f = f_E$ is minimal by twist.
 \end{frame}
 %----------------------------------------------------------------------------------------
 
-\section{Chow-Heegner points}
 
-\begin{frame}{Definition: Chow-Heegner points}
+\section{Chow-Heegner points: a preliminary study}
+
+
+ \begin{frame}
+ \frametitle{\insertsection}
+ \tableofcontents[currentsection]
+ \end{frame}
+
+\begin{frame}[fragile]{Definition: Chow-Heegner points}
+\begin{center}
+\begin{tikzcd}
+& X_0(N) \arrow[ "\varphi", ld]  \arrow[dr, "\psi"] &  \\
+E & & F
+\end{tikzcd}
+\end{center}
+$E,F$: two non-isogeneous elliptic curves of  same conductor $N$. 
+
+$\varphi, \psi$: modular parametrisations of $E,F$. 
+
+The \red{Chow-Heegner point} associated to the pair $(E,F)$ is 
+\[
+	P_{E,F} = \sum \varphi(\psi^{*}(Q)), \forall Q \in F(\bC) 
+\]
+Facts: (1) $P_{E,F}$ is independent of the choice of $Q$;  
+
+\qquad \quad (2) $P_{E,F} \in E(\bQ)$. 
 
 \end{frame}
 
-\begin{frame}{Even index of Chow-Heegner points}
 
+\begin{frame}{Even index of Chow-Heegner points}
+Numerical evidence suggests that the index $i_{E,F}$ is always divisible by 2. 
+\begin{theorem}[C.]
+Let $\sigma_0(N)$ denote the number of distinct prime factors of $N$. If 
+\[
+	\sigma_0(N) > \log_2(\# E[2](\bQ)) + \log_2(\# F[2](\bQ)) + 2,
+\]
+then $P_{E,F} \in 2E(\bQ)$. 
+\end{theorem}
 \end{frame}
 
 \subsection{Computing Chow-Heegner points}
 
-\begin{frame}{Darmon et al. , Stein}
-asdf
+\begin{frame}{\insertsubsection : previous work}
+
+There exist numerical algorithms to compute Chow-Heegner points.  
+
+\medskip 
+
+\begin{itemize}
+\item Darmon, Daub, Lichtenstein and Rotger -- using (complex and $p$-adic) iterated integrals. 
+\item Stein  -- using complex integration to lift points via modular parametrization. 
+\end{itemize}
+
+
+
 \end{frame}
 
 \begin{frame}{My algorithm and an example}
 
+We present an algorithm that either computes the Chow-Heegner point $P_{E,F}$ or outputs fail. Let $x_E, y_E$, $x_F,y_F$ be the compositions of $\varphi, \psi$ with the $x$ and $y$ coordinate functions on $E$ and $F$, respectively. Note that there exists an algorithm to compute the q-expansions of $x_E,x_F,y_E$ and $y_F$.  
+
+\end{frame}
+
+\begin{frame}{Algorithm: computing Chow-Heegner points}
+\begin{algorithm}[H]
+\begin{algorithmic}              % enter the algorithmic environment
+    \Require  $E, F$  = non-isogeneous elliptic curves of conuductor $N$;
+    $q$-expansions of $x_E, y_E$, $x_F,y_F$.
+    \Ensure $P_{E,F}$.
+        \State{$u_E := (x_E)^{-1}$ and $u_F := (x_F)^{-1}$}.
+    \State{Compute a polynomial $F(x,y)$ such that $F_{E,F}(u_E,u_F) = 0$}.
+    \State $f_{ch,x}(x) := F_{E,F}(u_E,0)$.
+    \State Repeat for $v_E = (y_E)^{-1}$ and $u_F$, get $f_{ch,y}(x)$.
+    \State Factor $f_{ch,x} = \prod (x-a_i)$ over $\bar{\bQ}$.
+    \For{each $a_i$}
+    \If{$f_{ch,y}(b_i) = 0$}  $P_i = (a_i,b_i)$ \Else  \,  $P_i = - (a_i, b_i)$.
+    \EndIf
+    \EndFor
+\State Output $P_{E,F} = \sum_i P_i$.
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+
+\begin{frame}{Example}
+
+\begin{Example}
+Consider $E = \textbf{89a}$ and $F = \textbf{89b}$. Here $\deg(\varphi) = 2$ and $\deg(\psi) = 5$. Let 
+$D = D_{\varphi, \psi}= \varphi(\psi^*(\infty)) \in \Div(E)$. Define $G_1(x) = \prod_{P \in D} (x - x(P))$ 
+and $G_2(y) = \prod_{P \in D} (y - y(P))$. We computed 
+\[
+G_1(x) = x^{4} + \frac{13}{4} x^{3} + \frac{17}{4} x^{2} + \frac{21}{4} x + \frac{9}{2}, \; G_2(y) = y^{4} + \frac{1}{8} y^{3} + \frac{21}{4} y^{2} + \frac{7}{2} y + 3.
+\]
+
+$G_1(x)$ is irreducible over $\bQ$. Write $G_1(x) = \prod (x-a_i)$ with $a_i \in \bar{\bQ}$. We found  $b_i = -\frac{8}{9} a_i^{3} - \frac{20}{9} a_i^{2} - \frac{28}{9} a_i - \frac{10}{3}$ is the root of $G_2$ such that $(a_i,b_i) \in E$. Hence 
+	$$P_{E,F} = \sum_{i=1}^4 P_i, \; \mbox{ where } P_i = (a_i, b_i).$$
+Carrying out the summation, we obtain $P_{E,F} = (\frac{3}{4},-\frac{15}{8})$. 
+
+\end{Example}
+
+
 \end{frame}
 
 \begin{frame}{Future work}
+
+\begin{itemize}
+\item Prove even index in all cases. 
+\item Verify the data of Chow-Heegner points in Stein's paper and extend the table.
+\end{itemize}
 
 \end{frame}
 
