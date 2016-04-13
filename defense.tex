@@ -180,12 +180,12 @@ Advisor: William Stein % Your email address
  \end{frame}
 
 %-------------
-\subsection{Ellipitc curves and modular curves}
+\subsection{Elliptic curves and modular curves}
 
 \begin{frame}
 \frametitle{Elliptic curves over $\bQ$}
 \begin{Def}
-An {\bf elliptic curve }over $\bQ$ is a nonsingular projective curve $E \subseteq \bP^2$ with defining equation 
+An \red{elliptic curve} over $\bQ$ is a nonsingular projective curve $E \subseteq \bP^2$ with defining equation 
 \begin{equation*}
 y^2z = x^3 + Axz^2+Bz^3, 
 \end{equation*}
@@ -240,7 +240,7 @@ The BSD conjecture is open when $r_{an}(E) > 1$. \\
 \medskip
 \pause
 
-The proof of BSD for $r_{an}(E) = 1$ uses a construction called Heegner points. 
+The proof of rank BSD for $r_{an}(E) \leq 1$ uses Heegner points. 
 
 
 \end{frame}
@@ -254,9 +254,7 @@ Let $N \geq 1$ be an integer, consider the group
 \[
 	\Gamma_0(N) = \left \{ \abcd{a}{b}{c}{d} \in SL_2(\bZ): N \mid c \right\}.
 \]
-Let $\cH^* = \{z \in \bC: im(z) > 0\} \cup \bP^1{\bQ}$. 
-
-$\Gamma_0(N)$ acts on $\cH^{*} = \cH \cup \bQ \cup \{\infty\}$. 
+Let $\cH^* = \{z \in \bC: im(z) > 0\} \cup \bP^1(\bQ)$.  $\Gamma_0(N)$ acts on $\cH^{*}$ by fractional linear transformations. 
 
 \begin{Def}
 $X_0(N) = \Gamma_0(N) \backslash \cH^*$.
@@ -297,6 +295,15 @@ to $E$}.  \\
 
 We assume $E$ is optimal. Then $\varphi$ is unique up to sign.
 
+
+Idea:  use $\varphi$ to find points on $E$. 
+
+-- rational points on $X_0(N)$ -- cusps. 
+-- Heegner points. 
+-- Ramification points. 
+-- Others?? 
+
+Note up to now, there is no known construction in $\geq 2$. 
 
 
 \end{frame}
@@ -374,7 +381,7 @@ where $tr(P) = \sum_{\sigma: \bQ(P) \to \bar{\bQ}} P^{\sigma}$.
 %  F.Brunault: a sufficient condition such that $R_\varphi$ 
 %does not contain cusps
 
-\begin{question}
+\begin{question}[Mazur and Swinnerton-Dyer, 1974]
 Is there an elliptic curve $E/\bQ$ with $r_{an}(E) \geq 2$ and $rank(E_{crit}(\bQ)) >0$?
 \end{question}
 
@@ -405,7 +412,8 @@ Is there an elliptic curve $E/\bQ$ with $r_{an}(E) \geq 2$ and $rank(E_{crit}(\b
 %\frametitle{Critical Polynomials}
 
 %Notation: $Z_\omega =$.  \\
-\pause 
+
+To help compute $E_{crit}(\bQ)$, we make the following definition. 
 \begin{Def}
 %Let $E/\bQ$ be an elliptic curve of conductor $N$ and let $j$ be the $j$-invariant. 
 Write $\Div(\omega) = \sum n_z[z]$. The \red{critical j-polynomial} of $E$ is 
@@ -413,7 +421,14 @@ Write $\Div(\omega) = \sum n_z[z]$. The \red{critical j-polynomial} of $E$ is
 F_{E,j}(x) = \prod_{z \in \supp \Div(\omega), j(z) \neq \infty}(x-j(z))^{n_z}.
 \]
 \end{Def}
-$F_{E,j}(x) \in \bQ[x], \deg F_{E,j} \leq 2g-2$. Equality holds if $N$ is square free. For $h \in \bQ(X_0(N))$, can define $F_{E,h}(x)$. 
+$F_{E,j}(x) \in \bQ[x]$ and $\deg F_{E,j} \leq 2g-2$ (euality holds if $N$ is square free). 
+
+\pause
+\smallskip
+
+For $h \in \bQ(X_0(N))$, can define $F_{E,h}(x)$. 
+
+
 \end{frame}
 
 %------------------------------------------------
@@ -421,7 +436,9 @@ $F_{E,j}(x) \in \bQ[x], \deg F_{E,j} \leq 2g-2$. Equality holds if $N$ is square
 \begin{frame}{Polynomial Relation (I)}
 %When  $N$ is not square free, \textbf{NORM} does not work. \textbf{IPR} is an algorithm to compute $F_{E,j}$, which works for any $N$. \\
 
-Let $r, u \in \bQ(C)$, a \red{minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial $P(x,y) \in \bQ[x,y]$, such that $P(r,u) = 0$.  \\
+Let $C$ be a curve and let $r, u \in \bQ(C)$. 
+
+A \red{minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial $P(x,y) \in \bQ[x,y]$, such that $P(r,u) = 0$.  \\
 
 Say $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$. 
 
@@ -458,7 +475,7 @@ For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ is a minimal
 \[
 		F_{E,j}(x) = f_0(1/x) \cdot x^{A} (x - 1728)^B
 \]	
-where $A,B$ are explicitly computable integers. 
+where $A,B$ are explicitly computable. 
 \end{Prop}
 
 \end{frame}
@@ -572,6 +589,8 @@ $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\b
 %\end{align*}
 
 For $i = 2,3$, let $\mathscr{E}_i(N)$ be the set of elliptic points on $X_0(N)$ of period $i$. \\
+
+(Fixme: $P_{all}$ is not defined). 
 
 \pause
 \begin{Lemma}[C.]
@@ -1025,7 +1044,7 @@ and $G_2(y) = \prod_{P \in D} (y - y(P))$. We computed
 G_1(x) = x^{4} + \frac{13}{4} x^{3} + \frac{17}{4} x^{2} + \frac{21}{4} x + \frac{9}{2}, \; G_2(y) = y^{4} + \frac{1}{8} y^{3} + \frac{21}{4} y^{2} + \frac{7}{2} y + 3.
 \]
 
-$G_1(x)$ is irreducible over $\bQ$. Write $G_1(x) = \prod (x-a_i)$ with $a_i \in \bar{\bQ}$. We found  $b_i = -\frac{8}{9} a_i^{3} - \frac{20}{9} a_i^{2} - \frac{28}{9} a_i - \frac{10}{3}$ is the root of $G_2$ such that $(a_i,b_i) \in E$. Hence 
+Write $G_1(x) = \prod (x-a_i)$ with $a_i \in \bar{\bQ}$. We found  $b_i = -\frac{8}{9} a_i^{3} - \frac{20}{9} a_i^{2} - \frac{28}{9} a_i - \frac{10}{3}$ is the root of $G_2$ such that $(a_i,b_i) \in E$. Hence 
 	$$P_{E,F} = \sum_{i=1}^4 P_i, \; \mbox{ where } P_i = (a_i, b_i).$$
 Carrying out the summation, we obtain $P_{E,F} = (\frac{3}{4},-\frac{15}{8})$. 
 

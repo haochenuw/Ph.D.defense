@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Critical subgroups of elliptic curves}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Ellipitc curves and modular curves}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Elliptic curves and modular curves}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{The critical subgroup and critical polynomials}{7}{0}{1}
 \beamer@subsectionintoc {1}{3}{Application of results to $E_{crit}(\mathbb {Q})$}{12}{0}{1}
 \beamer@sectionintoc {2}{$q$-expansion of newforms at non-unitary cusps}{16}{0}{2}
