@@ -443,15 +443,15 @@ A \red{minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial 
 Say $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$. 
 
 
-\begin{Prop}[C.]
+\begin{Lemma}[C.]
 \label{mult}
 If $\bQ(C) = \bQ(r,u)$ and $\gcd(f_0(y), f_n(y)) = 1$, then 
 %$\Div_{\infty}(r) \subseteq \Div_0(u)$,
 \[
-		f_0(y) = c \prod_{z \in\Div_{0}(r) \setminus \Div_{\infty}(u)} (y - u(z))^{mult_z(\Div_0(r))}.
+		f_0(y) = c \prod_{z \in \supp \Div_{0}(r) \setminus  \supp \Div_{\infty}(u)} (y - u(z))^{mult_z(\Div_0(r))}.
 \]
 %(2) Let $K$  be a finite Galois extension of $\bQ(u)$ containing $\bQ(r,u)$ and $\{r_1 = r, r_2,  \cdots, r_n \} \subseteq K$ be the conjugates of $r$ over $\bQ(u)$. Suppose $\Div_0(r_i) \cap  \Div_{\infty}(r_j) = \emptyset$ for all $i, j$, then $\gcd(f_0(y), f_n(y)) = 1$ and the conclusion of (1) holds.
-\end{Prop}
+\end{Lemma}
 
 
 \end{frame}
@@ -460,7 +460,7 @@ If $\bQ(C) = \bQ(r,u)$ and $\gcd(f_0(y), f_n(y)) = 1$, then
 
 \begin{frame}{Polynomial Relation (II)}
 Set \[
-r = j(j-1728)  \frac{\omega }{{\mathrm{d}j}}, \;  u = \frac{1}{j}.
+r = j(j-1728)  \frac{\omega }{{d j}}, \;  u = \frac{1}{j}.
 \]
 Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points in $\supp D_0$ have $j$-value 0 or 1728.  \\
 
@@ -471,7 +471,7 @@ Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points
 %Moreover, if $T >  2g-2$, then the pair $(rj^T,u)$ satisfies the conditions of the proposition. (\hyperlink{condition is satisfied}{\underline{One proves it by looking at the zeros and poles of $rj^T$}}). % Proof is not long, but please believe me. t
 
 \begin{Prop}[C.]
-For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ is a minimal polynomial relation of $rj^T$ and $u$. Then
+For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ be a minimal polynomial relation of $rj^T$ and $u$. Then
 \[
 		F_{E,j}(x) = f_0(1/x) \cdot x^{A} (x - 1728)^B
 \]	
@@ -486,12 +486,15 @@ where $A,B$ are explicitly computable.
 \begin{algorithmic}[[1]
 \Require The newform $f_E$ attached to elliptic curve $E/\bQ$; 
 \Ensure $F_{E,j}$.  
-\State $r = \frac{j(j-1728) f_E dz }{dj}, \;  u = \frac{1}{j}$. 
-\State Compute the q-expansions of $r$ and $u$ to $q^M$. 
-\State Solve the system $\sum c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $
-\State Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the theorem.
+\State $r = \frac{j(j-1728) f_E  dz }{dj}, \;  u = \frac{1}{j}$. 
+\State Compute the q-expansions of $r$ and $u$ to precision $q^M$. 
+\State Solve the linear equations $\sum c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $ for $c_{a,b}$. 
+\State Set $P(x,y) = \sum c_{a,b}x^ay^b$ and apply the proposition. 
 \end{algorithmic}
 \end{algorithm}
+
+(Fixme: define $H_d$). 
+
 \begin{Example}
 $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\bf 37b},j}(x) = H_{-16}(x)^2$.
 \end{Example}
@@ -588,9 +591,15 @@ $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\b
 %& \implies \sum_{z \in \Div(g)} n_z\varphi(z) = 0 \in E(\bQ). 
 %\end{align*}
 
-For $i = 2,3$, let $\mathscr{E}_i(N)$ be the set of elliptic points on $X_0(N)$ of period $i$. \\
+For $i = 2,3$, let $\mathscr{E}_i(N)$ be the set of elliptic points on $X_0(N)$ of period $i$. 
+(Fixme: informally define elliptic points). 
 
-(Fixme: $P_{all}$ is not defined). 
+(Fixme: $P_{all}$ is not defined).  
+
+
+
+
+
 
 \pause
 \begin{Lemma}[C.]
@@ -633,7 +642,7 @@ Then $rank(E_{crit}(\bQ))  = 0$.
    \begin{table}[h!]
     \begin{tabular}{ | l | l | l | |p{4.4cm}  |}
     \hline
-    $E \footnotemark$ & $g(X_0(N))$    & $h$ & $\mbox{ Factorization of } F_{E,h}(x)$     \\ \hline \hline
+    $E$ & $g(X_0(N))$    & $h$ & $\mbox{ Factorization of } F_{E,h}(x)$     \\ \hline \hline
     389a & 32  & $j$ & $H_{-19}(x)^2 (x^{60}+ \cdots)$ \\ \hline
     433a & 35  & $j$ &  $x^{68}+\cdots$  \\ \hline
      446d & 55  & $j$ &  $x^{108}+\cdots$ \\ \hline
@@ -688,15 +697,18 @@ Then $rank(E_{crit}(\bQ))  = 0$.
 \begin{frame}{Discussion}
 
 \begin{Corollary}
-For all elliptic curves $E$ of rank 2 and conductor $N <1000$, the rank of $E_{crit}(\bQ))$ is 0.
+For all elliptic curves $E$ of rank 2 and conductor $N <1000$, the rank of $E_{crit}(\bQ)$ is 0.
 \end{Corollary}
 \pause
 \smallskip
-Future work
+Future work: 
 \begin{itemize}
-\item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$.
+\item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$. (Fixme: have a time estimate). 
 
 \item Prove or disprove that $\rank(E_{crit}(\bQ)) = 0$ whenever $r_{an}(E)$ is even.
+
+(For infinitely many?) 
+
 \end{itemize}
 
 \end{frame}
@@ -817,7 +829,7 @@ Applying to $f$, we arrive at
 
 \begin{frame}{Idea (ctnd)}
 
-Now it left to compute the expansions of  each $f| R_\chi(c') W_N$ in the sum. 
+It suffices to compute the expansions of  each $f| R_\chi(c') W_N$ in the sum. 
 
 $f \otimes \chi$ :=  the unique newform such that $a_p(f \otimes \chi) = a_p(f_\chi)$ for almost all $p$. 
 (We call $f \otimes \chi$ the \red{twist of $f$ by $\chi$}).
@@ -827,7 +839,7 @@ If $c' = \cond(\chi)$ and $f_\chi = f \otimes \chi$, then  $f| R_\chi(c') W_N = 
 \medskip
 
 Otherwise, $f_\chi = (f \otimes \chi) | ( 1 - U_d | B_d)$, and we use 
-\begin{Lemma} 
+\begin{Lemma}
    $$f| B_d|W_N = \left(\frac{N}{Md^2} \right)^{k/2}  w(f)  (f|B_{\frac{N}{Md}})^{*}.$$
 \end{Lemma} 
 
@@ -883,7 +895,7 @@ and we put
 \[
 	\langle f, \{\alpha, \beta\} \rangle := \int_{\alpha}^{\beta} f \textrm{d} z. 
 \]
-\begin{Lemma}
+\begin{Lemma}[C.]
 There exists a weight-$k$ modular symbol $M$ be such that $W_N(M) = N^{k/2 -1} M^*$. Moreover, if $\langle f, M \rangle \neq 0$, then 
 \[
 	w(f) = \frac{\langle f,M \rangle }{\overline{\langle f,M \rangle}}.
@@ -1010,7 +1022,9 @@ There exist numerical algorithms to compute Chow-Heegner points.
 
 \begin{frame}{My algorithm and an example}
 
-We present an algorithm that either computes the Chow-Heegner point $P_{E,F}$ or outputs fail. Let $x_E, y_E$, $x_F,y_F$ be the compositions of $\varphi, \psi$ with the $x$ and $y$ coordinate functions on $E$ and $F$, respectively. Note that there exists an algorithm to compute the q-expansions of $x_E,x_F,y_E$ and $y_F$.  
+We present an algorithm that either computes the Chow-Heegner point $P_{E,F}$. 
+
+ Let $x_E, y_E$, $x_F,y_F$ be the compositions of $\varphi, \psi$ with the $x$ and $y$ coordinate functions on $E$ and $F$, respectively. Note that there exists an algorithm to compute the q-expansions of $x_E,x_F,y_E$ and $y_F$.  
 
 \end{frame}
 
@@ -1056,6 +1070,7 @@ Carrying out the summation, we obtain $P_{E,F} = (\frac{3}{4},-\frac{15}{8})$.
 \begin{frame}{Future work}
 
 \begin{itemize}
+\item Compute Chow-Heegner points for curves of different conductors. 
 \item Prove even index in all cases. 
 \item Verify the data of Chow-Heegner points in Stein's paper and extend the table.
 \end{itemize}
