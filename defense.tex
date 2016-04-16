@@ -254,7 +254,9 @@ Let $N \geq 1$ be an integer, consider the group
 \[
 	\Gamma_0(N) = \left \{ \abcd{a}{b}{c}{d} \in SL_2(\bZ): N \mid c \right\}.
 \]
-Let $\cH^* = \{z \in \bC: im(z) > 0\} \cup \bP^1(\bQ)$.  $\Gamma_0(N)$ acts on $\cH^{*}$ by fractional linear transformations. 
+Let $\cH^* = \{z \in \bC: im(z) > 0\} \cup \bP^1(\bQ)$.  
+
+$\Gamma_0(N)$ acts on $\cH^{*}$ by fractional linear transformations. 
 
 \begin{Def}
 $X_0(N) = \Gamma_0(N) \backslash \cH^*$.
@@ -303,7 +305,7 @@ Idea:  use $\varphi$ to find points on $E$.
 -- Ramification points. 
 -- Others?? 
 
-Note up to now, there is no known construction in $\geq 2$. 
+Note: up to now, no known construction in $\geq 2$. 
 
 
 \end{frame}
@@ -421,7 +423,7 @@ Write $\Div(\omega) = \sum n_z[z]$. The \red{critical j-polynomial} of $E$ is
 F_{E,j}(x) = \prod_{z \in \supp \Div(\omega), j(z) \neq \infty}(x-j(z))^{n_z}.
 \]
 \end{Def}
-$F_{E,j}(x) \in \bQ[x]$ and $\deg F_{E,j} \leq 2g-2$ (euality holds if $N$ is square free). 
+$F_{E,j}(x) \in \bQ[x]$ and $\deg F_{E,j} \leq 2g-2$ (equality holds if $N$ is square free). 
 
 \pause
 \smallskip
@@ -567,7 +569,7 @@ $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\b
 
 
 %------------------------------------------------
-\subsection{Application of results to $E_{crit}(\bQ)$}
+\subsection{Computing the critical subgroup}
 
 \begin{frame}{The critical subgroup $E_{crit}(\bQ)$}
 
@@ -698,7 +700,9 @@ For all elliptic curves $E$ of rank 2 and conductor $N <1000$, the rank of $E_{c
 \smallskip
 Future work: 
 \begin{itemize}
-\item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$. (Fixme: have a time estimate). 
+\item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$. 
+
+Current method will take roughly  5500/(number of cpus) hours.  
 
 \item Prove or disprove that $\rank(E_{crit}(\bQ)) = 0$ whenever $r_{an}(E)$ is even.
 
@@ -726,6 +730,7 @@ Future work:
  \end{frame}
 
 
+\subsection{Problem description}
 
 
 
@@ -798,6 +803,8 @@ $$\large{f | \left[\mtwo{1}{0}{ld}{1}\right]}$$
 $\red{\mbox{ at } \infty} \mbox{ for all } d^2 \mid N, l \in (\bZ/N\bZ)^{\times}$.
 
 \end{frame}
+
+\subsection{Deriving the formula}
 
 \begin{frame}{Idea of computing}
 
@@ -899,8 +906,6 @@ There exists a weight-$k$ modular symbol $M$ be such that $W_N(M) = N^{k/2 -1} M
 
 \end{frame}
 
-\subsection{Examples}
-
 \begin{frame}{Examples (I)}
 
 \begin{Example}
@@ -957,13 +962,15 @@ Assume $E/\bQ$, $f = f_E$ is minimal by twist.
 %----------------------------------------------------------------------------------------
 
 
-\section{Chow-Heegner points: a preliminary study}
+\section{Chow-Heegner points}
 
 
  \begin{frame}
  \frametitle{\insertsection}
  \tableofcontents[currentsection]
  \end{frame}
+ 
+\subsection{Even index}
 
 \begin{frame}[fragile]{Definition: Chow-Heegner points}
 \begin{center}
@@ -988,7 +995,20 @@ Facts: (1) $P_{E,F}$ is independent of the choice of $Q$;
 
 
 \begin{frame}{Even index of Chow-Heegner points}
-Numerical evidence suggests that the index $i_{E,F}$ is always divisible by 2. 
+
+\begin{theorem}[Yuan-Zhang-Zhang]
+Assume some technical conditions. Then 
+%that the local root numbers of $L(E,F,F,s)$ at every prime of bad reduction is +1 and that the root number at 
+%infinity is $-1$. 
+\[
+	\hat{h}(P_{E,F}) = (\star) \cdot L'(E,F,F,\frac{1}{2}),
+\]
+where $(\star)$ is nonzero.
+\end{theorem}
+
+
+When $E$ has rank 1, numerical evidence suggests that the index $i_{E,F} := [E(\bQ)/tors: \bZ P_{E,F}]$ is even, 
+when it is finite. 
 \begin{theorem}[C.]
 Let $\sigma_0(N)$ denote the number of distinct prime factors of $N$. If 
 \[
@@ -1018,6 +1038,9 @@ There exist numerical algorithms to compute Chow-Heegner points.
 \begin{frame}{My algorithm and an example}
 
 We present an algorithm that either computes the Chow-Heegner point $P_{E,F}$. 
+
+\pause 
+\medskip
 
  Let $x_E, y_E$, $x_F,y_F$ be the compositions of $\varphi, \psi$ with the $x$ and $y$ coordinate functions on $E$ and $F$, respectively. Note that there exists an algorithm to compute the q-expansions of $x_E,x_F,y_E$ and $y_F$.  
 
