@@ -226,6 +226,7 @@ $r$ is called the \red{rank}. $T$ is the \red{torsion subgroup}.
 There is an entire function $L(E,s)$ called the $L$-function of $E$.  \\
 
 \medskip
+\pause
 
 The rank part of the  \red{Birch and Swinnerton-Dyer (BSD) conjecture} is:
 \begin{equation*}
@@ -233,15 +234,13 @@ The rank part of the  \red{Birch and Swinnerton-Dyer (BSD) conjecture} is:
 \end{equation*}
 
 \pause
-
-RHS is the \red{analytic rank}, denoted by \red{$r_{an}(E)$}. \\
-The BSD conjecture is open when $r_{an}(E) > 1$. \\
-
 \medskip
-\pause
 
-The proof of rank BSD for $r_{an}(E) \leq 1$ uses Heegner points. 
-
+\begin{itemize}
+\item $\ord_{s=1}L(E,s)$ is the \red{analytic rank}, denoted by \red{$r_{an}(E)$}. \\
+\item The BSD conjecture is open when $r_{an}(E) > 1$. \\
+\item The proof of rank BSD for $r_{an}(E) \leq 1$ uses Heegner points. 
+\end{itemize}
 
 \end{frame}
 
@@ -254,17 +253,15 @@ Let $N \geq 1$ be an integer, consider the group
 \[
 	\Gamma_0(N) = \left \{ \abcd{a}{b}{c}{d} \in SL_2(\bZ): N \mid c \right\}.
 \]
-Let $\cH^* = \{z \in \bC: im(z) > 0\} \cup \bP^1(\bQ)$.  
-
-$\Gamma_0(N)$ acts on $\cH^{*}$ by fractional linear transformations. 
+$\cH^* := \{z \in \bC: im(z) > 0\} \cup \bP^1(\bQ)$.  $\Gamma_0(N)$ acts on $\cH^{*}$. 
 
 \begin{Def}
-$X_0(N) = \Gamma_0(N) \backslash \cH^*$.
+$X_0(N) = \Gamma_0(N) \backslash \cH^*$ is the modular curve of level $N$. 
 \end{Def}
 
 \begin{itemize}
-\item $X_0(N)$ has the structure of a  nonsingular projective curve.
-\item Rational functions on $X_0(N)$ are called modular functions. They have \red{$q$-expansions} at infinity:
+\item $X_0(N)$ is a  nonsingular projective curve.
+\item Rational functions on $X_0(N)$ have \red{$q$-expansions} at infinity:
 \[
 	u(q)  = \sum_{n \geq -m} b_n q^n, \; q = e^{2 \pi i z}. 
 \]
@@ -298,7 +295,7 @@ to $E$}.  \\
 We assume $E$ is optimal. Then $\varphi$ is unique up to sign.
 
 
-Idea:  use $\varphi$ to find points on $E$. 
+Idea:  use $\varphi$ to find points on $E$ from special points on $X_0(N)$. 
 
 -- rational points on $X_0(N)$ -- cusps. 
 -- Heegner points. 
@@ -357,7 +354,7 @@ Note: up to now, no known construction in $\geq 2$.
 % Let $\varphi: X_0(N) \to E$ be the modular parametrisation and let 
 
 
-Let $R_\varphi =  \sum (e_\varphi(z)  -1) [z]$ be the ramification divisor of $\varphi$.
+Let $R_\varphi$ be the ramification divisor.
 
 \begin{Def}[Mazur, Swinnerton-Dyer]
 The \red{critical subgroup} of $E$ is
@@ -426,7 +423,7 @@ F_{E,j}(x) = \prod_{z \in \supp \Div(\omega), j(z) \neq \infty}(x-j(z))^{n_z}.
 $F_{E,j}(x) \in \bQ[x]$ and $\deg F_{E,j} \leq 2g-2$ (equality holds if $N$ is square free). 
 
 \pause
-\smallskip
+\medskip
 
 For $h \in \bQ(X_0(N))$, can define $F_{E,h}(x)$. 
 
@@ -437,32 +434,9 @@ For $h \in \bQ(X_0(N))$, can define $F_{E,h}(x)$.
 
 \begin{frame}{Polynomial Relation (I)}
 %When  $N$ is not square free, \textbf{NORM} does not work. \textbf{IPR} is an algorithm to compute $F_{E,j}$, which works for any $N$. \\
-
-Let $C$ be a curve and let $r, u \in \bQ(C)$. 
-
-A \red{minimal polynomial relation} of $r$ and $u$ is an irreducible polynomial $P(x,y) \in \bQ[x,y]$, such that $P(r,u) = 0$.  \\
-
-Say $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$. 
-
-
-\begin{Lemma}[C.]
-\label{mult}
-If $\bQ(C) = \bQ(r,u)$ and $\gcd(f_0(y), f_n(y)) = 1$, then 
-%$\Div_{\infty}(r) \subseteq \Div_0(u)$,
+Let
 \[
-		f_0(y) = c \prod_{z \in \supp \Div_{0}(r) \setminus  \supp \Div_{\infty}(u)} (y - u(z))^{mult_z(\Div_0(r))}.
-\]
-%(2) Let $K$  be a finite Galois extension of $\bQ(u)$ containing $\bQ(r,u)$ and $\{r_1 = r, r_2,  \cdots, r_n \} \subseteq K$ be the conjugates of $r$ over $\bQ(u)$. Suppose $\Div_0(r_i) \cap  \Div_{\infty}(r_j) = \emptyset$ for all $i, j$, then $\gcd(f_0(y), f_n(y)) = 1$ and the conclusion of (1) holds.
-\end{Lemma}
-
-
-\end{frame}
-
-
-
-\begin{frame}{Polynomial Relation (II)}
-Set \[
-r = j(j-1728)  \frac{\omega }{{d j}}, \;  u = \frac{1}{j}.
+r := j(j-1728)  \frac{\omega }{{d j}}, \;  u := \frac{1}{j}.
 \]
 Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points in $\supp D_0$ have $j$-value 0 or 1728.  \\
 
@@ -473,7 +447,8 @@ Then $r, u \in \bQ(X_0(N))$, and $\Div_0(r)  = \Div(\omega) + D_0$, where points
 %Moreover, if $T >  2g-2$, then the pair $(rj^T,u)$ satisfies the conditions of the proposition. (\hyperlink{condition is satisfied}{\underline{One proves it by looking at the zeros and poles of $rj^T$}}). % Proof is not long, but please believe me. t
 
 \begin{Prop}[C.]
-For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ be a minimal polynomial relation of $rj^T$ and $u$. Then
+For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ be an irreducible polynomial over $\bZ$ such that 
+$P(rj^T, u) = 0$. Then
 \[
 		F_{E,j}(x) = f_0(1/x) \cdot x^{A} (x - 1728)^B
 \]	
@@ -488,6 +463,7 @@ where $A,B$ are explicitly computable.
 \begin{algorithmic}[[1]
 \Require The newform $f_E$ attached to elliptic curve $E/\bQ$; 
 \Ensure $F_{E,j}$.  
+\smallskip
 \State $r = \frac{j(j-1728) f_E  dz }{dj}, \;  u = \frac{1}{j}$. 
 \State Compute the q-expansions of $r$ and $u$ to precision $q^M$. 
 \State Solve the linear equations $\sum c_{a,b}r(q)^au(q)^b = 0 \pmod {q^M} $ for $c_{a,b}$. 
@@ -495,7 +471,7 @@ where $A,B$ are explicitly computable.
 \end{algorithmic}
 \end{algorithm}
 
-For a discriminant $d< 0$, let $H_d$ be the Hilbert class polynomial of disc $d$. 
+Let $H_d$ be the Hilbert class polynomial of disc $d$. 
 \begin{Example}
 $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\bf 37b},j}(x) = H_{-16}(x)^2$.
 \end{Example}
@@ -591,20 +567,6 @@ $F_{{\bf 44a},j}(x) = H_{-44}(x)^2$. $F_{{\bf 37a},j}(x) = H_{-148}(x)$. $F_{{\b
 %& \implies \varphi_*(\Div(g)) = 0 \in Div^0(E) \\
 %& \implies \sum_{z \in \Div(g)} n_z\varphi(z) = 0 \in E(\bQ). 
 %\end{align*}
-
-Elliptic points: a finite set of points on $X_0(N)$ corresponding to elliptic curves with extra endormorphisms. \\ 
-
-For $i = 2,3$, let $\mathscr{E}_i(N)$ be the set of elliptic points on $X_0(N)$ of period $i$.  \\ 
-
-\pause
-
-\begin{Lemma}[C.]
-Let $P_{all} = \sum_{z \in \supp R_\varphi} mult_{R_\varphi}(z) \varphi(z)$.  Then \\
-$6 P_{all} =  - 3 \sum_{c \in \mathscr{E}_2(N)} \varphi(c) - 4 \sum_{d \in \mathscr{E}_3(N)} \varphi(d)$. \\
-\end{Lemma}
-
-\smallskip
-\pause
 
 %Recall the lemma: 
 %\begin{Lemma}[C.]
@@ -799,8 +761,8 @@ First, only well-defined for $denom(\fc)^2 \mid N$. \\
 
 Equivalent to computing the expansion of 
 
-$$\large{f | \left[\mtwo{1}{0}{ld}{1}\right]}$$ 
-$\red{\mbox{ at } \infty} \mbox{ for all } d^2 \mid N, l \in (\bZ/N\bZ)^{\times}$.
+$$\large{f | \left[\mtwo{1}{0}{\ell d}{1}\right]}$$ 
+$\red{\mbox{ at } \infty} \mbox{ for all } d^2 \mid N$ and $\ell \in (\bZ/N\bZ)^{\times}$.
 
 \end{frame}
 
@@ -815,7 +777,7 @@ Let $S_c' = \abcd{1}{\frac{1}{c'}}{0}{1}$ and $A_c' = \abcd{1}{0}{c'}{1}$.  Then
 For a character $\chi$ modulo $c'$, put 
 \begin{equation*}
 \label{formula: RS}
-	f | R_\chi(c') := \sum_{u =0}^{c'-1} \bar{\chi}(u) f | S_{c'}^u.
+	f | \red{R_\chi(c')} := \sum_{u =0}^{c'-1} \bar{\chi}(u) f | S_{c'}^u.
 \end{equation*}
 $f|R_\chi(\cond \chi) = g(\bar{\chi})f_\chi$. ($f_\chi (q) = \sum a_n(f) \chi(n)  q^n$ is a modular form of level $N'$.)   We have \begin{equation} 
 \label{formula}
@@ -824,20 +786,23 @@ $f|R_\chi(\cond \chi) = g(\bar{\chi})f_\chi$. ($f_\chi (q) = \sum a_n(f) \chi(n)
 
 Applying to $f$, we arrive at
 \begin{equation} \label{expansion0}
-	\boxed{f_{[\frac{a}{c}]} \left( q\right) = \frac{w(f) }{\varphi(c')}\sum_{\cond(\chi) \mid c'} \chi(-a) f| R_\chi(c')  W_N}. 
+	\boxed{f_{[\frac{a}{c}]} \left( q\right) = \frac{w(f) }{\varphi(c')}\sum_{\cond(\chi) \mid c'} \chi(-a) f| R_\chi(c')  W_N}
 \end{equation}
 \end{frame}
 
 
 \begin{frame}{Idea (ctnd)}
 
-It suffices to compute the expansions of  each $f| R_\chi(c') W_N$ in the sum. 
+Just need to compute $f| R_\chi(c') W_N$.  \\
 
-$f \otimes \chi$ :=  the unique newform such that $a_p(f \otimes \chi) = a_p(f_\chi)$ for almost all $p$. 
-(We call $f \otimes \chi$ the \red{twist of $f$ by $\chi$}).
+Recall: $f \otimes \chi$ :=  the unique newform such that $a_p(f \otimes \chi) = a_p(f_\chi)$ for almost all $p$. 
+(We call $f \otimes \chi$ the \red{twist of $f$ by $\chi$}). \\
+
+\pause 
+\medskip
 
 
-If $c' = \cond(\chi)$ and $f_\chi = f \otimes \chi$, then  $f| R_\chi(c') W_N = w(f \otimes \chi) f_\chi$. 
+When $c' = \cond(\chi)$ and $f_\chi = f \otimes \chi$, then  $f| R_\chi(c') W_N = w(f \otimes \chi) f_\chi$. 
 \medskip
 
 Otherwise, $f_\chi = (f \otimes \chi) | ( 1 - U_d | B_d)$, and we use 
@@ -954,9 +919,11 @@ f_\fc(q) = \left(-0.755 - 0.172i\right)q + \left(0.441 - 0.916i\right)q^{2}
 \begin{frame}{Further work}
 Assume $E/\bQ$, $f = f_E$ is minimal by twist. 
 \begin{itemize}
-\item relation to automorphic side: \\ psuedo-eigenvalues relates to epsilon factors of $\pi_{f \otimes \chi}$. Another way to determine the local components of $\pi_f$. 
+\item relation to automorphic side: \\ psuedo-eigenvalues relates to epsilon factors of $\pi_{f \otimes \chi}$. \\
+Another way to determine the local components of $\pi_f$. 
  
-\item Let $\fc$ be a cusp of prime denominator $p \geq 5$. Seems that $a_1(f_\fc)$ is only divisible by primes that are $\pm 1 \mod{p}$. Can we prove this? 
+\item Let $\fc$ be a cusp of prime denominator $p \geq 5$. Seems that $a_1(f_\fc)$ is only divisible by primes that are $\pm 1 \mod{p}$. \\
+ Can we prove this? 
  \end{itemize}
 \end{frame}
 %----------------------------------------------------------------------------------------
@@ -1021,6 +988,7 @@ then $P_{E,F} \in 2E(\bQ)$.
 \subsection{Computing Chow-Heegner points}
 
 \begin{frame}{\insertsubsection : previous work}
+
 
 There exist numerical algorithms to compute Chow-Heegner points.  
 
