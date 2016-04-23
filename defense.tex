@@ -77,21 +77,23 @@
 %\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 
 \makeatletter
-\setbeamertemplate{footline}
-{
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertsection
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertsubsection
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,right]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertauthor \,  Ph.D. defense \hspace*{2em}
-  \end{beamercolorbox}}%
-  \vskip0pt%
-}
+
+%\setbeamertemplate{footline}
+%{
+ % \leavevmode%
+ % \hbox{%
+%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,center]{author in head/foot}%
+ %   \usebeamerfont{author in head/foot}\insertsection
+ % \end{beamercolorbox}%
+ % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,center]{title in head/foot}%
+  %  \usebeamerfont{title in head/foot}\insertsubsection
+ % \end{beamercolorbox}%
+ % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.2ex,dp=1ex,right]{date in head/foot}%
+  %  \usebeamerfont{date in head/foot}\insertauthor \,  Ph.D. defense \hspace*{2em}
+% \end{beamercolorbox}}%
+ % \vskip0pt%
+%}
+
 \makeatother
 
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
@@ -141,9 +143,9 @@
 \author{Hao Chen} % Your name
 \institute[UW] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-University of Washington Ph.D. defense \\ % Your institution for the title page
+\large{University of Washington Ph.D. defense} \\ % Your institution for the title page
 \medskip
-Advisor: William Stein % Your email address
+\large{Advisor: William Stein} % Your email address
 }
 \date{April 26, 2016} % Date, can be changed to a custom date
 
@@ -173,16 +175,12 @@ Advisor: William Stein % Your email address
 %------------------------------------------------
 
 % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
- \begin{frame}
- \frametitle{\insertsection}
- \tableofcontents[currentsection]
- \end{frame}
 
 %-------------
-\subsection{Elliptic curves and modular curves}
+\subsection{Part I: Critical subgroups of elliptic curves}
 
 \begin{frame}
-\frametitle{Elliptic curves over $\bQ$}
+\frametitle{Part I: Critical subgroups of elliptic curves}
 \begin{Def}
 An \red{elliptic curve} over $\bQ$ is a nonsingular projective curve $E \subseteq \bP^2$ with defining equation 
 \begin{equation*}
@@ -250,9 +248,9 @@ The rank part of the  \red{Birch and Swinnerton-Dyer (BSD) conjecture} is
 \frametitle{Modular curves}
 Let $N \geq 1$ be an integer, consider the group 
 \[
-	\Gamma_0(N) = \left \{ \abcd{a}{b}{c}{d} \in SL_2(\bZ): N \mid c \right\}.
+	\Gamma_0(N) = \left \{ \abcd{a}{b}{c}{d} \in SL_2(\bZ):  N \mbox{ divides } c \right\}.
 \]
-Let $\cH^* := \{z \in \bC: im(z) > 0\} \cup \bQ \cup \infty$.  $\Gamma_0(N)$ acts on $\cH^{*}$. 
+Let $\cH^* := \{z \in \bC: im(z) > 0\} \cup \bQ \cup \infty$. Then $\Gamma_0(N)$ acts on $\cH^{*}$. 
 
 \begin{Def}
 $X_0(N) = \Gamma_0(N) \backslash \cH^*$ is the \red{modular curve} of level $N$. 
@@ -275,7 +273,7 @@ $X_0(N) = \Gamma_0(N) \backslash \cH^*$ is the \red{modular curve} of level $N$.
 %$\omega$ is a holomorphic differential on $X_0(N)$.
 %\end{Fact}
 
-The \red{Modularity Theorem} (Breuil, Conrad, Diamond, Taylor) proves the existence of an integer $N > 1$ and a surjective morphism 
+The \red{Modularity Theorem} (Breuil, Conrad, Diamond, Taylor) states the existence of an integer $N > 1$ and a surjective morphism 
 $\varphi: X_0(N) \to E$ defined over $\bQ$.
 
 \pause
@@ -295,18 +293,19 @@ We assume $E$ is optimal. Then $\varphi$ is unique up to sign.
 
 
 \end{frame}
-\begin{frame}
+\begin{frame}{Motivation: find rational points on $E$}
 
 Idea: use $\varphi$ to find rational points on $E$ from special points on $X_0(N)$. 
 
 \begin{itemize}
-\item rational points on $X_0(N)$ -- usually get torsion points.  
+\item Rational points on $X_0(N)$ -- usually cusps, so only get torsion points.  
 \item Heegner points.  -- Great for $r_{an}(E) = 1$. Always torsion when $r_{an}(E) \geq 2$.
 \item Ramification points -- probably always torsion when $r_{an}(E)$ is even. 
 \item Others?? 
 \end{itemize}
 
-Note: up to now, no known construction in $\geq 2$. 
+Up to now, there is no known construction of points of infinite order on elliptic curves with 
+analytic rank at least 2! 
 
 
 \end{frame}
@@ -458,7 +457,7 @@ $r := (j-1728)  \frac{\omega}{{d j}}, \;  u := \frac{1}{j}$ on $X_0(N)$.
 \begin{Prop}[C.]
 For $T \gg 0$, let $P(x,y) = f_n(y)x^n + \cdots + f_1(y)x + f_0(y)$ be an irreducible polynomial over $\bQ$,  such that $P(u, rj^T) = 0$.  Then
 \[
-		F_{E,j}(x) = P(\frac{1}{x}, 0) \cdot x^{A} (x - 1728)^B
+		F_{E,j}(x) = P \left(\frac{1}{x}, 0 \right) \cdot x^{A} (x - 1728)^B
 \]	
 where $A,B$ are explicitly computable. 
 \end{Prop}
@@ -651,7 +650,7 @@ Future work:
 \begin{itemize}
 \item Compute $E_{crit}(\bQ)$ for $E = {\bf 5077a}$. 
 
-Current method will take roughly  5500 hours (parallel computation using 64 cpus). 
+Current method will take roughly  230 days (parallel computation using 64 cpus). 
 
 \item Prove there are infinitely many elliptic curves with rank  2 such that the critical subgroup is 
 torsion.
@@ -669,7 +668,7 @@ torsion.
 % modular forms
 %----------------------------------------------------------------------------------------
 
-\section{$q$-expansion of newforms at all cusps} 
+\section{Part II: $q$-expansion of newforms at all cusps} 
 
  \begin{frame}
  \frametitle{\insertsection}
@@ -703,8 +702,8 @@ defined by
 
 \begin{Def}
 A \textbf{modular form} of weight $k$ and level $N$ is a holomorphic function $f: \cH \to \bC$ s.t. \\
-(1) $f(z)  = f|[\alpha]_k(z), \; \forall \alpha \in \Gamma_0(N)$ ($\Gamma_1(N)$). \\
-(2) $f$ has holomorphic extension to all cusps of $X_0(N)$ ($X_1(N)$). \\
+(1) $f(z)  = f|[\alpha]_k(z), \; \forall \alpha \in \Gamma_0(N)$. \\
+(2) $f$ has holomorphic extension to all cusps of $X_0(N)$. \\
 \end{Def}
 
 \pause
@@ -734,7 +733,7 @@ We will focus on newforms from now.
 
 
 \begin{frame}{Fourier expansion}
-Let $f \in S_k(\Gamma_0(N))$ be a newform and let $\fc = [\frac{a}{c}] \in X_0(N)$ be a cusp. \\
+Let $f \in S_k(N)$ be a newform and let $\fc = [\frac{a}{c}] \in X_0(N)$ be a cusp. \\
 
 
 Goal: compute the expansion of $f$ at $\fc$. Denote the expansion by $f_{\fc}(q)$.  \\
@@ -829,23 +828,28 @@ newform $f \otimes \chi$, called \red{the twist of $f$ by $\chi$}, on some other
 %\item $B_d$ and $U_d$ operators: $B_d(\sum a_n q^n) = \sum a_{n} q^{nd}$, $U_d(\sum a_n q^n) = \sum a_{nd} q^{n}$.
 
 \begin{frame}{Pseudo-eigenvalue}
-The Atkin-Lehner involution $W_N$.  If $f$ is a newform on $\Gamma_1(N)$, then 
+The Atkin-Lehner involution $W_N$:  Let $f$ be a newform on $\Gamma_1(N)$. Then  
 \[
 	f | W_N = w(f) \bar{f}
 \]
-where $w(f)$ has absolute value 1. It is called the \red{pseudo-eigenvalue} of $f$. 
+where $w(f)$ has absolute value 1, and 
+\[
+	\bar{f} = \sum \overline{a_n(f)} q^n. 
+\]
+
+The number $w(f)$ is called the \red{pseudo-eigenvalue} of $f$. 
 \end{frame}
 
 
 \begin{frame}{Algorithm for identifying $f \otimes \chi$}
 
 \begin{Lemma}[Li]
-Let $\epsilon$ be the character of $f$. Then the level of $f \otimes \chi$ divides $lcm(N, \cond(\epsilon) \cond(\chi), \cond(\chi)^2)$. 
+Suppose $f$ is a newform on $\Gamma_0(N)$. Then the level of $f \otimes \chi$ divides $lcm(N, \cond(\chi)^2)$. 
 \end{Lemma}
 
 The following lemma is a small modification of the Sturm bound argument. 
 \begin{Lemma}[C.]
-For every $N \geq 1$, there exists an integer $B = B(N)$ such that if $g_1$, $g_2$ be two normalised newforms of levels $N_1,N_2$ dividing $N$ and 
+For every $N \geq 1$, there exists an integer $B$ such that:  if $g_1$, $g_2$ are  two newforms of levels $N_1,N_2$, both dividing $N$ and 
 \[
 	a_n(g_1) = a_n(g_2), \, \mbox{for all }1 \leq n \leq B \mbox{ such that } \gcd(n,N) = 1,
 \]
@@ -857,7 +861,7 @@ then $g_1 = g_2$.
 
 \begin{frame}{Computing the pseudo-eigenvalue}
 Recall that modular symbols are linear combinations of $\{\alpha, \beta\}$, $\alpha, \beta \in \bQ \cup \infty$, 
-and we put 
+and we can integrate a modular symbol against a modular form via
 \[
 	\langle f, \{\alpha, \beta\} \rangle := \int_{\alpha}^{\beta} f \textrm{d} z. 
 \]
@@ -887,15 +891,10 @@ Another way to determine the local components of $\pi_f$.
 
 \section{Chow-Heegner points}
 
-
- \begin{frame}
- \frametitle{\insertsection}
- \tableofcontents[currentsection]
- \end{frame}
  
 \subsection{Even index}
 
-\begin{frame}[fragile]{Definition: Chow-Heegner points}
+\begin{frame}[fragile]{Part III: Chow-Heegner points}
 
 Motivation: construct rational points on elliptic curves (again).
 
@@ -977,9 +976,6 @@ We obtain $P_{E,F} = (\frac{3}{4},-\frac{15}{8})$.
 
 \end{frame}
 
-\begin{frame}
-\Huge{\centerline{Thank you!}}
-\end{frame}
 
 
 \end{document} 
